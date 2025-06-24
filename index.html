@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Nafisa's case Study</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html, body {
+      margin: 0;
+      font-family: sans-serif;
+      height: 100%;
+      background-color: rgb(241, 230, 217);
+      font-family: "Raleway";
+    }
+    body {
+      display: block;
+    }
+    .chart-container {
+      position: fixed;
+      top: 30px;
+      left: 30px;
+      right: 30px;
+      background: #f8f8f8;
+      z-index: 5;
+      height: 300px;
+      border: 5px solid rgb(56, 167, 152);
+      border-width: 30px 3px 3px 3px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    #chart {
+      width: 100%;
+      height: 400px;
+    }
+    .photo-image {
+  position: fixed;
+  top: 430px;
+  right: 0;
+  width: 400px;
+  height: 400px;
+  z-index: 1;
+  padding-right: 30px;
+}
+
+
+    #scrolly {
+      margin-top: 430px;
+      display: flex;
+      flex-direction: column;
+      gap: 100vh;
+      max-width: auto; 
+      margin-left: 0px;
+      margin-right: auto;
+      padding-left: 30px;
+      padding-right: 500px;
+      position: relative;
+      z-index: 2;
+    }
+    .step {
+      background: rgba(255, 255, 255, 0.3);
+      border-left: 3px solid #ccc;
+      padding: 40px 40px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      font-size: 1rem;
+
+    }
+    .step h3 {
+      margin-top: 0;
+      font-size: 1.25rem;
+    }
+    .step p {
+      font-size: 1rem;
+      line-height: 1.5;
+      padding-right: 30px;
+    }
+    @media (min-width: 768px) {
+      .step {
+        font-size: 1.2rem;
+      }
+      .step h3 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .img-step {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+     .img-step.active {
+    opacity: 1;
+  }
+  </style>
+</head>
+<body>
+
+<div class="chart-container">
+  <canvas id="geo-chart" height="400"></canvas>
+</div> 
+
+<div class="photo-image">
+    <img src="whole-basin.jpg" class="img-step" data-img="0">
+    <img src="cotton.jpg" class="img-step" data-img="1">
+    <img src="map-cases.jpg" class="img-step" data-img="2">
+    <img src="konibodom-photo.jpg" class="img-step" data-img="3">
+    <img src="jabbar-ras-photo.jpg" class="img-step" data-img="4">
+</div>
+
+
+<div id="scrolly">
+  <div class="step" data-step="0">
+    <h3>Introduction</h3>
+    <p>In Central Asia (referring to Kazakhstan, Kyrgyzstan, Tajikistan, Turkmenistan, and Uzbekistan), the issue of water scarcity has recently emerged as a critical concern in academic and public discourse and is increasingly recognised as a driver of socio-political tension and regional instability. Particularly in the Fergana Valley (here, referring to Kyrgyzstan, Tajikistan, and Uzbekistan), the growing imbalance between water demand and supply, the inefficiency of irrigation systems, and competing sectoral needs have intensified local and transboundary disputes over shared water resources (Hermans et al., 2024).</p>
+      <p>The pressures have accordingly intensified due to increasing temperatures, glacier retreat, and a higher frequency of droughts, especially in the summer when water demand is highest. In the valley's rural areas, where agriculture relies significantly on irrigation, fluctuations and uncertainties in water supply pose risks to food security and the livelihoods of local communities during the cropping season. Furthermore, the scarcity of water and limited access to clean drinking water are often primarily linked to geographical and climatic conditions, with political and economic factors further compounding the issue.</p>
+  </div>
+  <div class="step" data-step="1">
+    <h3>"Beloe Zoloto"</h3>
+    <p>In addition to this, institutional rigidity (ibid.) reflects deeper structural constraints linked to the political economy of irrigated agriculture in the region, as also observed in case studies during the 2023 and 2024 field trips. According to the farmers from Tajikistan’s Jabbor Rasulov district (former Proletarsk), approximately 60% of irrigated land continues to be dedicated to cotton cultivation—an ongoing legacy from the Soviet-era planned economy, where cotton was promoted as a strategic monoculture crop.
+
+The priority placed on cotton planting reinforces the hierarchical nature of water allocation by favouring crops that align with state interests rather than supporting diversified, farmer-led agricultural practices.</p>
+    <p>The priority placed on cotton planting reinforces the hierarchical nature of water allocation by favouring crops that align with state interests rather than supporting diversified, farmer-led agricultural practices.</p>
+   </div>
+  <div class="step" data-step="2">
+    <h3>Case studies region</h3>
+    <p>These contextual settings include the geographic diversity of Central Asia, which is
+characterised by extensive mountain ranges, plentiful freshwater sources, steppes, and arid
+regions; this has led to different projections when it comes to water scarcity. Although
+Tajikistan is often presented as a water-rich country due to its substantial glacier-fed river
+systems and significant hydropower potential (both of which are central to national
+development strategies), its abundance is unevenly distributed. The Sughd region, located in
+the northern part of the country, is the only area that depends primarily on transboundary
+water sources, positioning it as a downstream area. Notably, just 21% of its water supply is
+derived from rainfall (Wegerich et al., 2013). The contradiction illustrates the spatial
+differences in water access between national water abundance and regional vulnerability in
+the area that hosts more than half of Tajikistan’s irrigated agricultural land. The main river
+contributing to irrigation in this area is the Syr Darya, which spans 195 kilometres in the
+Sughd region. Its primary tributary rivers, Isfara, Khodja Bakirgan, Isfana, and Aksu,
+originate from the Turkestan Range. Together, their waters are used for hydropower
+production in the Bakhri Tojik water reservoir (formerly Kairakkum dam), along with the Big
+Fergana Canal (BFC), North Fergana Canal (NFC), and Khodja Bakirgan Canal (KBC).</p>
+     </div>
+  <div class="step" data-step="3">
+    <h3>Konibodom</h3>
+    <p>The water users in the Konibodom area's water user association (WUA) Iram-2014 consume
+water from the Big Fergana Canal (BFC) on the border with Besharyk, Uzbekistan.
+12
+In Konibodom, water is primarily diverted from the Syr-Darya and Isfara rivers into the Big
+Fergana Canal (BFC), which supplies irrigation to nearly 13,000 farms
+2
+. The 270-kilometre
+BFC, constructed in 1939, begins at the Naryn and later Karadarya rivers and obtains water
+from multiple tributaries that cross the national boundaries of both Central Asian countries
+along the route (Wegerich et al., 2013). The local population of approximately 55,000
+residents is predominantly Uzbek- and Tajik-speaking, with Kyrgyz communities residing
+near Khistevarz along the route to Konibodom. 
+
+    </p><p>The Big Fergana Canal traverses both Uzbek
+and Tajik territories, with the Isfara River being the final tributary that contributes to its
+course. This arrangement results in a portion of the Isfara River’s flow returning to Tajikistan
+via a canal that passes through a neighbouring country, underscoring the river’s
+transboundary nature and the interdependent dynamics of water management across
+national borders (Pak et al., 2014). During one of our visits to the Vodkhoz of Konibodom,
+instances of water scarcity in this area were reported from the start of the vegetation season
+through mid-April, with the overall water delivery rate of 5–6 m³/second falling to nearly
+one-third of the actual demand throughout the cropping season. In response, farms have
+increasingly turned to groundwater extraction, with over 400 registered wells in operation as
+of 2022.</p>
+  </div>
+  <div class="step" data-step="4">
+    <h3>Jabbar-Rasulov</h3>
+    <p>Our second case study explores water management practices by the Water User
+Association, Ona Nodirboboeva, in the Jabbor Rasulov district, formerly known as
+Proletarsk. Approximately a third of the cultivable area in Jabbor Rasulov is in the tail part of
+the Khoja-Bakirgan canal and relies on three-level pumping stations to obtain water from the
+Syr-Darya River. The Khoja Bakirgan (formerly known as Guliakandoz) canal draws water
+from the Khoja Bakirgan River using a dammed hydraulic construction for intake (Mirzaev et
+al., 2017). The river starts on the northern slope of the Turkestan Range in Tajikistan, where
+snow and glaciers feed it. Then it enters the Leylek District of Batken Province in the Kyrgyz
+Republic, located near the southern border with Tajikistan. This river then flows into the
+Fergana Valley and eventually joins the Big Fergana Canal. The overall length of the Khoja
+Bakirgan canal measures 30.4 km, with 20.4 km being inside the Jabbor Rasulov district
+(ibid.). The Isfana River sub-basin also flows through the Jabbor Rasulov District and the
+southern Leylek to the west of the Khoja-Bakirgan River. During periods of high-water flow,
+the Isfana flows into the Syr Darya. 
+<p>As explained to us by our interlocutors, this part of the
+Fergana Valley faces a shortage of cultivable land due to high population density and the
+prevalence of ridges and mountainous terrain. For instance, the foothill and lowland areas of
+the Jabbor Rasulov district are among the most densely populated, with approximately
+2 This and the following statistical data are drawn from Tajikistan’s Strategic Development Plan for
+2016–2020, city of Konibodom and Jabbor Rasulov district
+13
+150,000 residents across 1,620 farms cultivating around 13,000 hectares of irrigated land.
+Notably, over 80% of the farming population in this area is Uzbek-speaking. Moreover,
+irrigation in the higher-elevation zones relies primarily on pumping stations, which are often
+inefficient due to ageing infrastructure and long-standing, unresolved issues related to
+maintenance and repair. These technical shortcomings further exacerbate the challenges of
+agricultural production in an already resource-constrained environment. With only three out
+of eight pumping stations operational and reported fluctuations in surface water availability
+from the Khoja Bakirgan and Magistralniy Canals (particularly during early spring, March to
+mid-April, and again in June), the majority of farmers have increasingly come to rely on
+groundwater wells. According to official statistics, 522 such wells were in use as of 2022.</p>
+  </div>
+   <div class="step" data-step="5"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@2.2.0"></script>
+<script src="https://unpkg.com/scrollama"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+
+function haversine(lat1, lon1, lat2, lon2) {
+  const R = 6371e3;
+  const toRad = deg => deg * Math.PI / 180;
+  const dLat = toRad(lat2 - lat1);
+  const dLon = toRad(lon2 - lon1);
+  const a = Math.sin(dLat/2)**2 +
+            Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+            Math.sin(dLon/2)**2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+let chart;
+let fullData = [];
+Chart.defaults.font.family = 'Raleway';
+
+  const images = [
+    document.getElementById('img-0'),
+    document.getElementById('img-1'),
+    document.getElementById('img-2'),
+    document.getElementById('img-3'),
+    document.getElementById('img-4')
+  ];
+
+d3.dsv(";", "profile-syrdarya.csv").then(rows => {
+  const coords = rows.map(d => ({
+    lat: +d.latitude,
+    lon: +d.longitude,
+    alt: +d["altitude (m)"]
+  }));
+
+  let dist = 0;
+  const data = coords.map((p, i) => {
+    if (i > 0) {
+      dist += haversine(coords[i - 1].lat, coords[i - 1].lon, p.lat, p.lon);
+    }
+    return { x: +(dist / 1000).toFixed(2), z: p.alt };
+  });
+
+  fullData = data;
+  drawProfile(data);
+});
+
+function updateImages(step) {
+  document.querySelectorAll('.img-step').forEach((img, i) => {
+    img.classList.toggle('active', i === step);
+  });
+}
+
+function drawProfile(data) {
+  const ctx = document.getElementById('geo-chart').getContext('2d');
+  const labels = data.map(d => d.x);
+  const values = data.map(d => d.z);
+
+  chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: 'River profile',
+        data: values,
+        borderColor: 'rgb(56, 167, 152)',
+        tension: 0.3,
+        pointRadius: 0,
+        fill: false
+      }]
+    },
+    options: {
+      responsive: true,
+      animation: {
+    duration: 800,
+    easing: 'easeOutCubic'
+  },
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        annotation: { annotations: {} }
+      },
+      scales: {
+        x: {
+          type: 'linear',
+          title: { display: true, text: 'Distance along the river, km' }
+        },
+        y: {
+          title: { display: true, text: 'Elevation, m' }
+        }
+      }
+    }
+  });
+
+  setupScrollTriggers(data);
+}
+
+function animateAnnotationOpacity(opacity = 1, duration = 800) {
+  const start = performance.now();
+
+  function step(now) {
+    const t = Math.min((now - start) / duration, 1);
+    const eased = t * t * (3 - 2 * t); 
+
+    const currentOpacity = +(eased * targetOpacity).toFixed(2);
+
+    chart.options.plugins.annotation.annotations.uzb.borderColor = `rgba(0,0,0,${currentOpacity})`;
+    chart.options.plugins.annotation.annotations.uzb.label.color = `rgba(0,0,0,${currentOpacity})`;
+
+    chart.options.plugins.annotation.annotations.taj.borderColor = `rgba(0,0,0,${currentOpacity})`;
+    chart.options.plugins.annotation.annotations.taj.label.color = `rgba(0,0,0,${currentOpacity})`;
+
+    chart.options.plugins.annotation.annotations.kaz.borderColor = `rgba(0,0,0,${currentOpacity})`;
+    chart.options.plugins.annotation.annotations.kaz.label.color = `rgba(0,0,0,${currentOpacity})`;
+
+    chart.update();
+
+    if (t < 1) requestAnimationFrame(step);
+  }
+
+  requestAnimationFrame(step);
+}
+
+
+function setupScrollTriggers(data) {
+  const max = data.reduce((a, b) => b.z > a.z ? b : a);
+  const min = data.reduce((a, b) => b.z < a.z ? b : a);
+  const rangeStart = 100;
+  const rangeEnd = 180;
+
+  function findClosestX(targetX) {
+  return data.reduce((prev, curr) =>
+    Math.abs(curr.x - targetX) < Math.abs(prev.x - targetX) ? curr : prev
+  );
+}
+
+  const scroller = scrollama();
+  scroller.setup({ step: ".step", offset: 0.5, debug: false })
+    .onStepEnter(response => {
+      const step = +response.element.dataset.step;
+      const update = chart.data.datasets[0];
+
+      updateImages(step);
+
+      
+
+      if (step === 0) {
+        chart.options.plugins.annotation.annotations = {};
+        update.pointRadius = data.map(() => 0);
+        update.pointBackgroundColor = data.map(() => 'rgba(0,0,0,0)');
+        update.segment = {};
+      }
+
+      if (step === 1) {
+
+        chart.options.scales.x.min = 0;
+        chart.options.scales.x.max = 1800;
+        chart.options.scales.y.min = 0;
+        chart.options.scales.y.max = 500;
+
+
+          const fromOpacity = 0;
+          const intermediateOpacity = 0.2;
+  const toOpacity = 1;
+
+  const buildLine = (x, label, id, position, xAdjust) => ({
+    type: 'line',
+    xMin: x,
+    xMax: x,
+    borderColor: `rgba(0,0,0,${fromOpacity})`,
+    borderWidth: 1,
+    borderDash: [6, 4],
+    label: {
+      content: label,
+      display: true,
+      enabled: true,
+      position,
+      xAdjust,
+      yAdjust: -200,
+      color: `rgba(0,0,0,${fromOpacity})`,
+      backgroundColor: 'rgba(0,0,0,0)',
+      font: { size: 10, weight: 'bold' },
+      clip: false
+    }
+  });
+
+  
+  chart.options.plugins.annotation.annotations = {
+    uzb: buildLine(0, 'Uzbekistan', 'uzb', 'start', 12),
+    taj: buildLine(160, 'Tajikistan', 'taj', 'start', 30),
+    uzb2: buildLine(260, 'Uzbekistan', 'uzb2', 'start', 35),
+    kaz: buildLine(376, 'Kazakhstan', 'kaz', 'start', 500)
+  };
+
+  
+  setTimeout(() => {
+    ['uzb', 'taj', 'uzb2', 'kaz'].forEach(id => {
+      chart.options.plugins.annotation.annotations[id].borderColor = `rgba(0,0,0,${toOpacity})`;
+      chart.options.plugins.annotation.annotations[id].label.color = `rgba(0,0,0,${toOpacity})`;
+    });
+    chart.update(); 
+  }, 300); 
+
+           chart.options.scales.x.min = 0;
+        chart.options.scales.x.max = 1800;
+        chart.options.scales.y.min = 0;
+        chart.options.scales.y.max = 500;
+}
+
+      if (step === 2) {
+
+
+        chart.options.scales.x.min = 150;
+        chart.options.scales.x.max = 270;
+        chart.options.scales.y.min = 450;
+        chart.options.scales.y.max = 250;
+
+
+        setTimeout(() => {
+    ['uzb', 'taj', 'uzb2', 'kaz'].forEach(id => {
+      chart.options.plugins.annotation.annotations[id].borderColor = `rgba(0,0,0,${intermediateOpacity})`;
+      chart.options.plugins.annotation.annotations[id].label.color = `rgba(0,0,0,${intermediateOpacity})`;
+    });
+    chart.update(); 
+  }, 300); 
+
+        
+        
+      }
+
+      if (step === 3) {
+
+        const targetPoint = findClosestX(167);
+
+        update.pointRadius = data.map(d => d.x === targetPoint.x ? 15 : 0);
+        update.pointBackgroundColor = data.map(d => d.x === targetPoint.x ? 'white' : 'rgba(0,0,0,0)');
+
+      }
+
+      if (step === 4) {
+               const targetPoint = findClosestX(243);
+
+        update.pointRadius = data.map(d => d.x === targetPoint.x ? 15 : 0);
+        update.pointBackgroundColor = data.map(d => d.x === targetPoint.x ? 'white' : 'rgba(0,0,0,0)');
+      }
+
+      chart.update();
+    });
+
+  window.addEventListener("resize", scroller.resize);
+}
+</script>
+</body>
+</html>
