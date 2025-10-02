@@ -1,0 +1,127 @@
+/* ----- ClearSans ----- */
+@font-face { font-family: 'ClearSans'; src: url('fonts/ClearSans-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'ClearSans'; src: url('fonts/ClearSans-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; }
+@font-face { font-family: 'ClearSans'; src: url('fonts/ClearSans-BoldItalic.ttf') format('truetype'); font-weight: 700; font-style: italic; }
+@font-face { font-family: 'ClearSans'; src: url('fonts/ClearSans-Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; }
+@font-face { font-family: 'ClearSans'; src: url('fonts/ClearSans-Light.ttf') format('truetype'); font-weight: 300; font-style: normal; }
+@font-face { font-family: 'ClearSans'; src: url('fonts/ClearSans-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; }
+@font-face { font-family: 'ClearSans'; src: url('fonts/ClearSans-MediumItalic.ttf') format('truetype'); font-weight: 500; font-style: italic; }
+@font-face { font-family: 'ClearSans'; src: url('fonts/ClearSans-Thin.ttf') format('truetype'); font-weight: 100; font-style: normal; }
+
+/* ----- Geologica ----- */
+@font-face { font-family: 'Geologica'; src: url('fonts/Geologica-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; }
+@font-face { font-family: 'Geologica'; src: url('fonts/Geologica-Light.ttf') format('truetype'); font-weight: 300; font-style: normal; }
+@font-face { font-family: 'Geologica'; src: url('fonts/Geologica-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; }
+@font-face { font-family: 'Geologica'; src: url('fonts/Geologica-SemiBold.ttf') format('truetype'); font-weight: 600; font-style: normal; }
+@font-face { font-family: 'Geologica'; src: url('fonts/Geologica-Thin.ttf') format('truetype'); font-weight: 100; font-style: normal; }
+
+/* ----- Geologica Auto ExtraBold ----- */
+@font-face { font-family: 'Geologica Auto'; src: url('fonts/Geologica_Auto-ExtraBold.ttf') format('truetype'); font-weight: 800; font-style: normal; }
+
+/* ----- Geologica Cursive ----- */
+@font-face { font-family: 'Geologica Cursive'; src: url('fonts/Geologica_Cursive-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; }
+@font-face { font-family: 'Geologica Cursive'; src: url('fonts/Geologica_Cursive-ExtraBold.ttf') format('truetype'); font-weight: 800; font-style: normal; }
+@font-face { font-family: 'Geologica Cursive'; src: url('fonts/Geologica_Cursive-Thin.ttf') format('truetype'); font-weight: 100; font-style: normal; }
+
+
+body {
+    width: 1200px;
+      font-family: "ClearSans", sans-serif;
+
+    }
+
+    .layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+    /* ФИКСИРОВАННЫЙ блок под графики */
+    .top-image {
+      position: fixed;
+
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 1200px;
+      height: 700px;
+      z-index: 10;
+      overflow: hidden;
+    }
+
+    
+    .scrolly-75-25 {
+          display: grid;
+  grid-template-columns: 52% 48%;
+  gap: 20px;
+  align-items: start;
+  padding-top: 400px;
+    }
+    
+    .top-image img {
+      width: 100%;
+      object-fit: contain;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-style: solid;
+      border-width: 10px;
+      border-color: white;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .top-image img.active {
+      opacity: 1;
+    }
+
+   .photo-image {
+  position: sticky;   
+  top: 400px;
+     
+  height: 400px;      
+}
+
+    .photo-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    .photo-image img.active {
+      opacity: 1;
+    }
+
+    /* Тексты */
+    #scrolly {
+ 
+      display: flex;
+      flex-direction: column;
+      gap: 100vh;
+      padding: 0 0px 0 30px;
+      position: relative;
+      z-index: 1;
+    }
+    .step {
+
+    }
+    .main-headline  {
+
+      font-family: "Geologica", sans-serif;
+      font-weight: 700;
+      padding-right: 10px;
+      padding-bottom: 20px;
+    }
+
+    .headline {
+      display: flex;
+      font-size: 24px;
+      font-family: "Geologica", sans-serif;
+       font-weight: 200;
+
+    }
